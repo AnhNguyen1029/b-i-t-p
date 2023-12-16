@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable</title>
+</head>
+<body>
+    <!--
+        Variable : biến trong javascript
+        BIến là gì?
+        Biến dùng để khai báo giá trị trong js
+        có 3 cách khai báo biến, dungf từ khóa để khai báo biến
+        var,let,const
+
+        var fullname = "Vũ Thị Hồng Vân"
+
+     -->
+    <script>
+        /* var name1; */
+        /* var fullName ='"Vũ Thị Hồng Vân"'; */
+        /* 
+        cấu trúc gồm 3 phần
+        1.var : đây là từ khóa để khai báo biến (const,let);
+            var,let,const
+            ngày ra đời js(1995) thì chỉ có var thôi không có let,const
+            let và const ra đười ở phiên bản ES6(2015)
+            var :
+             + có thể khai báo lại
+             + gán lại giá trị
+             + phạm vi hoạt động function
+             + có hoisting
+            let : (thường được dùng)
+             + không thể khai báo lại
+             + có thể gán lại giá trị phạm vi hoạt động block score{}
+             + có hoisting nhưng không truy cập được
+            const : 
+             + thường dùng để khai báo hằng số
+             + không thể gán lại giá trị
+             + không thể khai báo lại
+             + khi khai báo phải gán giá trị cho nó, nếu không sẽ có lỗi
+             + phạm vi hoạt dộng như thằng let
+             + có hoisting nhưng không truy cạp được
+             NOTE: hoisting là như thế nào:
+             hoisting là việc đưa khai báo từ khóa lên đầu
+
+        2.fullname : tên biến
+            các quy tắc đặt tên biến
+            -đặt tên theo ý nghĩa
+            -đặt theo quy tắc camel-case (con lạc đà) tức là từ đầu viết thường các
+            từ sau viết hoa
+            -tránh đặt tên trùng với từ khóa đặt biệt(try, catch, class....);
+            -không được bắt đầu bằng số, chữ cái đặt biệt trừ ($,_);
+            
+        3. = là gán giá trị
+        4. "Vũ Thị Hồng Vân" chính là giá trị
+            DATA TYPES (kiểu dữ liệu.)
+            trong js chia làm 2 kiểu dữ liệu
+             1. đơn giản : primitive type
+             -string    : kiểu chữ (điểm nhận biết: có nháy "" hoặc '')
+             -number    : kiểu số
+             -nan       : not a number
+             -undefined : khi khai báo không gán giá trị
+             -null      : khi khai báo giá trị null
+             -boolean: kiểu đúng sai
+             2. phức tạp : reference type
+             -array   : 
+             -object  : đối tượng
+             -funciton: hàm
+            dấu nháy kép: với dấu nháy đơn là để đặt dấu nháy cho từ cần
+
+         */
+        let fullName="Lê Văn An";
+        let age=21;
+        let nan="hoa"/5;
+        let result;
+        let check="null";
+        let islogin=true;
+        // alert("xin chào "+ fullName)
+        console.log(name1);
+         var name1="hoa";
+         var name1="Hong";
+
+        if(true){
+            var a=7;
+        }
+        console.log(a);
+        /* khai báo 1 biến name có giá trị là hoa */
+    </script>
+</body>
+</html>

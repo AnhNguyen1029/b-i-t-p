@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <style>
+        *{
+            /* background-color: tomato; */
+        }
+        div p{
+            /* div cách p nghìa là p là con của div */
+            color: rgb(255, 0, 102);
+        }
+        div > p{
+            color: red;
+        }
+
+        .title1{
+            
+            color: red;
+            font-size: 50px;
+            /* font-weight: 900; */
+            font-family: Arial, Helvetica, sans-serif;
+            /* background-color: aliceblue; */
+            /* font-size: 50px; */
+            /* 
+            color: được gọi là : thuộc tính ( hay còn gọi là propety)
+            green : được gọi là giá trị của thuộc tính
+
+            */
+        }
+        .title2{
+            
+            color: red;
+            font-size: 50px;
+            /* background-color: aliceblue; */
+            /* font-size: 50px; */
+            /* 
+            color: được gọi là : thuộc tính ( hay còn gọi là propety)
+            green : được gọi là giá trị của thuộc tính
+
+            */
+        }
+        section, article{
+            color: rgb(192, 255, 215);
+        }/* dấu phẩy đổi màu cả 2 cái thành phần */
+        article + ul{
+            background-color: blue;
+        }/* dấu + là chỉ đổi màu thằng liền kề */
+        /* .btn:hover{
+            background-color: rgb(221, 20, 208);
+            cursor: pointer;/* thuộc tính đổi hình bàn tay khi rê chuột vào */}
+        /* thuộc tính hover là ghi liền(ko cách ra)đổi màu khi rê chuột vào */ */
+            .btn:active{
+                background-color: rgb(240, 10, 148)240, 249);
+            }
+        .input:focus{
+            background-color: yellow;
+        }
+        .after::after{
+            content: " text phía sau";
+        }
+        .before:before{
+            content: "text phía trước ";
+        }
+        .container{
+            background-image: url(../images/gà.png);
+            /* background-size: 100% 100%; */
+            background-position:top right;
+            background-repeat: no-repeat;
+        }
+        .title{
+            background-color: #dbdbdb;
+            /* text-align: center; */
+            padding-left: 50%;
+        }
+        a{
+            text-decoration:double;
+        }
+        .ul{
+            list-style: none;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            border: 5px solid red;
+            padding: 5px 10px 15px 20px; /* thay đổi từ phía trên(top)theo chiều kim đồng hồ */
+            /* rộng :100px+5px+5px=110px+5px+5px=120px
+            left( trái),top( trên),right( phải),bottom( dưới)
+            */
+            margin-bottom: 50px;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        .box1{
+            display: inline-block;
+        }
+        .box2{
+            display: inline-block;
+        }
+        .anh{
+            position: relative;
+            height: 100px;
+            width: 100px;
+        }
+</style>
+    <!-- 
+        1-color :  là màu chữu của text
+            các kiểu màu trong CSS:
+            1. theo tên tiếng Anh ( red, blue ,violet,...)
+            2.theo kiểu rgb : red green blue( chạy từ 0~255)
+            3. theo kiểu rgba : red green blue anpha
+            anpha chạy từ 0~1 (giống như là tạo độ nhạt độ mờ)
+            số 1 màu sẽ rực lên
+            để số 0 thì màu sẽ bị mờ và không thấy
+            4.theo màu hexa
+            5. màu hsla Hue Saturation Lightness Anpha(opacity)
+            Hue: đỏ, da cam, vàng, lục, lam, chàm, tím( theo từ 0~360 độ)
+        2-background-color : màu nền
+        3-1. font-size : độ to của text
+        3-2. font-weght: độ đậm của text
+        3-3. font-family : kiểu chữ, kiểu text
+
+        4-bộ chọn selector
+
+        quy tắc đặt tên class chuẩn BEM
+        block element modifier
+        SCSS 
+        ***********************
+        5. bộ chọn căn chỉnh text
+        6. box-model : khối(mô hình hộp)
+        đối với những thẻ inline thì không set đc width và height còn
+        inline-block và block thì set được
+        width : độ rộng cửa khối
+        height : độ dài
+        box-model:
+        1.margin : khoảng cách giữa các khối (element)
+        2.border : độ dày của viền khối
+        3.padding : khoảng cách thì border đến conten
+        4.conten : chiều rộng chiều dài của nội dung khối
+        độ rộng và chiều cao của khối không bao gồm margin chỉ tính
+        text + padding + border thôi
+     -->
+</head>
+<body>
+    <ul class="ul">
+        <li>1</li>
+    </ul>
+<section class="container">
+    <p class="title1">CSS basic font-size không có font-weight</p>
+    <p class="title2">CSS basic có font-weight</p>
+
+    <!-- <img src="" alt=""> -->
+    <p>Lorem ipsum doctor sit amet.</p>
+    <div>
+        <section>
+        <p>Lorem, ipsum</p>
+        </section>
+        <p>thẻ p là con của thẻ div</p>
+    </div>
+    <section>css</section>
+    <article>artice</article>
+    <ul>
+        <li>xin chào jv11</li>
+    </ul>
+    <ul>
+        <li>hello jv11</li>
+    </ul>
+    <button class="btn">click hover</button>
+    <input>
+    <p class="after">áp dụng after</p>
+    <p class="before">áp dụng before</p>
+</section>
+    <h1 class="title">học CSS</h1>
+    <a>home</a>
+    <a>about</a>
+
+    <div class="box box1">
+        box model 1
+    </div>
+    <div class="box box1">
+        box model 1
+    </div>
+    <div class="box box2">
+        box model 2
+    </div>
+    <div class="box anh">
+        box model 2
+    </div>
+</body>
+</html>

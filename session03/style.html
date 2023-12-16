@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <style>
+        h2{
+            color: yellow;
+        }
+    </style>
+    <!-- 
+        -cách 2: internal
+        -- tạo cặp thẻ style(tạo trong thẻ head) rồi viết CSS trong cặp thẻ style đó
+        chỉnh màu cho h2 trên này thì h2 bên dưới sẽ chuyển
+     -->
+</head>
+<body>
+    <!-- 
+        CSS: Cascading style sheets (ngôn ngữ định dạng tạo phong cách cho trang web)
+        các cách viết code CSS trong trang web
+        có 3 cách:
+        -cách 1: inline : Viết CSS trực tiếp trên dòng luôn
+        --viết CSS bên trong thẻ mở của element
+        -cách 2: internal
+        -- tạo cặp thẻ style(tạo trong thẻ head) rồi viết CSS trong cặp thẻ style đó
+        -cách 3: exterrnal
+        --tạo file có đuôi.css rồi viết code CSS trong file đó rồi link vào html
+        class và id : định danh element 
+        class có thể dùng chung : để gọi thì mình .tên class 
+        id là duy nhất(1 cái element thì chỉ có 1 cái id) : để gọi thì #tên id
+        
+        độ ưu tiên trong CSS
+        từ thấp đến cao:
+        element < class < id (cái gì cang bao trùm rộng thì ít đc ưu tiên)
+
+        1.block        :mỗi dòng mỗi hàng
+        2.inline       :nằm trên cùng 1 hàng
+        3.inline-block :set đc tất cả thuộc tính của block nhưng hiển thị theo kiểu inline
+     -->
+     <p style="color:red">css basic</p>
+     <h2>CSS internal</h2>
+     <h3 class="heading">CSS external1</h3>
+     <h3>CSS external2</h3>
+     <h4 id="anh" class="nguyen">ánh</h4>
+     <span class="hung1">hùng</span>
+     <span class="hung2">hùng</span>
+     <!-- span là thẻ inline : ko set được width với height -->
+</body>
+</html>

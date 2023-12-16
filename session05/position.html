@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* margin-top: 50px; */
+            position: relative;
+            top: 50px;
+            /* top:50px tức là cách bên trên 50px thì element sẽ dịch xuống dưới */
+            left: 50px;
+            /* left: 50px tức là cách bên trái 50px thì element sẽ dịch sang bên phải*/
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+
+        .box3 {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(38, 164, 199);
+            position: absolute;
+        }
+
+        .absolute {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background-color: yellow;
+            top: 0;
+            right: 0;
+        }
+
+        .parent {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            top: 100px;
+            background-color: bisque;
+        }
+
+        .position {
+            position: absolute;
+            background-color: white;
+        }
+
+        .usename {
+            position: absolute;
+        }
+
+        .position input {
+
+            width: 290px;
+        }
+
+        .eye {
+            position: absolute;
+            right: 0px;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        position :mục đích định vị, vị trí của element
+        1. static  : trạng thái mặc định
+        2. relative: vị trí tương đối
+        -nếu 1 element mà cso thuộc tính position có giá trị là relative thì nó sẽ lấy
+        vị trí ban đầu của nó đang đứng làm gốc
+        -nó sẽ lấy vị trí ban đầu của nó làm gốc
+        3. absolute:
+        -position: absolute
+        -nó sẽ ăn theo thằng cha chứa nó gần nhất có thuộc tính là
+        position (absolute,relative,fixed,sticky) tức là nó sẽ lấy tất cả vị trí thằng cha làm gốc
+        -nếu không có thằng cha chứa nó có thuộc tính position thì nó sẽ ăn theo kích
+        thước của màn hình
+        4. fixed   :
+        -fixder thường dùng để làm thanh header không di chuyển
+        nói nôm na dể hiểu thì nó đi theo màn hình dù có kéo lên hay kéo xuống
+        5. sticky  ::
+        -áp dụng thường khi scroll nó mới ăn thuộc tính
+        nói nôm na là khi kéo màn hình lên xuống đụng nó thì 
+        nó sẽ đi theo ( như cài đặt)
+     -->
+    <div class="box1">
+        box1
+    </div>
+
+    <div class="box2">
+        box2
+        <div class="parent">
+        <div class="box3">
+            box3
+            <div class="absolute">
+                absolute
+            </div>
+        </div>
+    </div>
+    <div class="usename">
+        <label for="name" name="name">use name</label>
+
+        <div class="position">
+            <input class="td" type="text">
+            <span class="material-symbols-outlined eye">
+                visibility
+            </span>
+        </div>
+    </div>
+</body>
+
+</html>

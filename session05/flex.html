@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            display: flex;
+            flex-direction: row;
+            /* 
+            trục main-axis nằm ngang
+            trục cross-axis nằm dọc 
+            */
+            background-color: red;
+            height: 300px;
+            justify-content: space-around;
+            /* align-items: end; */
+            gap: 5px;
+            flex-wrap: wrap;/* chia hàng trên xuống bên dưới */
+            /* gap là khoản cách giữa các item */
+        }
+        .flex-item{
+            height: 50px;
+            background-color: green;
+            width: 500px;
+        }
+        /* .flex1{
+            flex: 3;
+        } */
+    </style>
+</head>
+<body>
+    <!-- 
+        flex : giúp căn chỉnh layout
+        1. flex=container
+        -khi 1 element có display-flex thì nó trở thành flex-container
+        2. flex-item
+        -những item con thuộc flex container thì sẽ trở thành flex-item
+        3. nắm được 2 trục
+            3.1 :trục main-axis
+            trục chính
+            ăn theo: justify-content:
+            cá giá trị của justify-content:
+            -space-around
+            -space-beetween
+            -space-evenly
+            -center
+            3.2 : trục cross-axis
+            trục phụ
+            ăn theo thuôc tính align-item:
+        -- 2 trục này luôn luôn vuông góc với nhau
+        4. khi 1 element có thuộc tính display-flex
+        thì thuộc tính flex-direction mặc định là row
+            khi flex-direction: row; thì trục main axis nằm ngang
+        còn trục cross-axis nằm dọc
+            khi flex-direction: column;thì trục main axis nằm dọc
+        còn trục cross-axis nằm ngang
+     -->
+     <div class="box">
+        
+        <div class="flex-item flex1">
+            flex item1</div>
+        <div class="flex-item flex2">flex item2</div>
+        <div class="flex-item flex3" >flex item3</div>
+        <div class="flex-item flex4">flex item4</div>
+     </div>
+</body>
+</html>

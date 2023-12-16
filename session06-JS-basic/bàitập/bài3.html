@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài3</title>
+</head>
+<body>
+    <script>
+        let chieuDai = + prompt("chiều dài");
+        let chieuRong = + prompt("chiều rộng");
+        var chuViHinhChuNhat = (chieuDai + chieuRong) * 2;
+        var dienTichHinhChuNhat = chieuDai * chieuRong;
+        document.write("Chu vi hình chữ nhật = " , chuViHinhChuNhat+"<br>");
+        document.write("Diện tích hình chữ nhật = " , dienTichHinhChuNhat+"<br>");
+        
+        let banKinh = + prompt("bán kính");
+        const pi = 3.14;
+        var chuViHinhTron = 2*pi*banKinh;
+        var dienTichHinhTron = 3.14*(banKinh**2);
+        document.write("chu vi hình tròn = ", chuViHinhTron ,"<br>");
+        document.write("diện tích hình tròn = ", dienTichHinhTron);
+    </script>
+</body>
+</html>

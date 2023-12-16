@@ -1,0 +1,27 @@
+thead{
+    color: white;
+    background-color: orange;
+}
+tbody{
+    color: yellow;
+    background-color: rgb(8, 5, 78);
+    
+}
+tfoot{
+    background-color: orange;
+}
+.Submit{
+    color: white;
+    background-color: green;
+}
+.Cancel{
+    color: white;
+    background-color: brown;
+}
+table{
+    border: none;
+}
+tbody tr td:first-child{
+    text-align: right;
+    padding-right: 10px;
+}
