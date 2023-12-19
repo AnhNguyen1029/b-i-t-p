@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        8.0 <=ĐTB<=10: xếp loại GIỎI.
+        6.5<=ĐTB<=7.9: xếp loại KHÁ.
+        5.0<=ĐTB<=6.4: xếp loại TRUNG BÌNH.
+        ĐTB<5.0 : xếp loại YẾU.
+
+     -->
+    <script>
+        let toan = parseFloat(prompt("Nhập điểm môn Toán"));
+        let ly = parseFloat(prompt("Nhập điểm môn Lý"));
+        let hoa = parseFloat(prompt("Nhập điểm môn Hóa"));
+        let van = parseFloat(prompt("Nhập điểm môn Văn"));
+        let su = parseFloat(prompt("Nhập điểm môn Sử"));
+        let dia = parseFloat(prompt("Nhập điểm môn Địa"));
+        let diemTrungBinh = (toan + ly + hoa + van + su + dia) / 6;
+        if (diemTrungBinh<5) {
+            alert("Xếp loại yếu");
+        } else if(diemTrungBinh<=6.4){
+            alert("Xếp loại trung bình");
+        }else if(diemTrungBinh<=7.9){
+            alert("Xếp loại khá");
+        }else if(diemTrungBinh<=10){
+            alert("Xếp loại giỏi");
+        }else{
+            
+        }
+    </script>
+</body>
+</html>

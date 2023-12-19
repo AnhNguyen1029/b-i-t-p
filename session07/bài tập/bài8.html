@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Viết chương trình cho phép người dùng nhập vào cân nặng(kg) và chiều cao(m);
+        Sau đó hiển thị kết quả phân loại theo chỉ số BMI dưới đây.
+        bmi = weight / ( height ^ 2 );
+     -->
+     <script>
+        let weight=parseFloat(prompt("nhập cân nặng (kg)"));
+        let height=parseFloat(prompt("nhập chiều cao (m)"));
+        let bmi=weight/(height**2);
+        if (bmi<18.5) {
+            alert("Cân nặng thấp(gầy)")
+        }else if(bmi<=24.9){
+            alert("Bình thường")
+        }else if(bmi<=29.9){
+            alert("Thừa cân, tiền béo phì")
+        }else if(bmi<=34.9){
+            alert("Béo phì độ Ⅰ")
+        }else if(bmi<=39.9){
+            alert("Béo phì độ Ⅱ")
+        }else {
+            alert("Béo phì độ Ⅲ")
+        }
+     </script>
+</body>
+</html>
