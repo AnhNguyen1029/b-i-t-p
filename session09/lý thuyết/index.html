@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- kiểu dữ liệu phức tạp
+        1.array :mảng là kiểu dữ liệu thuộc loại phức tạp(reference type)
+        nó dùng để chứa tất cả mọi loại dữ liệu,
+        các phần tử trong mảng ngăn cách với nhau bơi dấu phẩy,
+        2. cách khai báo mảng
+         2.1 let array=[];
+             tên có ý nghĩa vẫn tuân theo camel-case
+         2.2 new Array() :( tham khảo thôi!/ cái này ít dùng)
+        3. CRUD với mảng:
+         C:create : thêm phần tử vào trong mảng
+         -push(): là 1 phương thức dùng trong mảng để thêm phần tử vào vị trí cuối cùng
+         -unshifr(): thêm phần tử vào vị trí đầu của mảng
+         -splice(): thêm vào vị trí mình muốn
+         R:read : 
+          -hiển thị nó ra
+         U:update
+          - cập nhật theo index
+         D:delete
+          -splice
+          -pop() : xóa phần tử cuối cùng
+          -shift(): xóa phần tử đầu tiên
+        4. các kiến thức nhớ của mảng
+         -length là độ dài của mảng.
+         -chỉ số index của các phần tử trong mảng bắt đầu từ 0
+         -có thể lấy các phần tử trong mảng theo index
+     -->
+    <script>
+        let array=["hoa",5,NaN,null,[]];
+        //console.log(array[0]);
+        //console.log(array.length);
+        //khai báo mảng sinh viên
+        let students=[];
+            students.push("vân");
+            students.push("hoa");
+            students.unshift("minh");
+            //["minh","vân","hoa"]
+            students.splice(1,1,"hồng");// 2 là vị trí, 0 là số phần tử muốn xóa , hồng là thêm vào vị trí mình xóa
+            students[0]="thanh"//update :cập nhật(thay đổi)
+            students.splice(1,1);
+        console.log("student",students);
+        for (let i = 0; i < students.length; i++) {
+            console.log(students[i]);
+            
+        }
+
+    </script>
+</body>
+</html>

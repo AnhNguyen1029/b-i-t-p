@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(1<2<3);//true < 3 la` đúng ( true mà ép về 1 con số thì nó là 1)
+        console.log(3>2>1);//true > 1 là sai (fall mà ép về 1 số để so sánh thì nó là 0)
+        console.log(true==1);
+        console.log(1||2||3);
+        /* 
+            1.falsy (&&)
+             -NaN,null,undefined,0,"",'',false
+            2.truthy (||)
+             -không phải là falsy
+
+             * đối với dạng có dấu || thì sẽ lấy truthy đầu tiên
+             nếu không có truthy nào thì sẽ lấy falsy đầu tiên
+             * đối với dạng có dấu && thì sẽ lấy falsy đầu tiên
+             nếu không có falsy nào thì sẽ lấy cuối cùng        
+        */
+//24.9<bmi<25
+        /*
+            pareInt(""): nó dùng để ép 1 chuỗi sang dãy số nguyên
+        */
+        console.log(parseInt("5"));
+        let name="hồng";
+        //bạn hồng rất chăm chỉ, 
+        console.log("bạn "+name+" rất chăm chỉ");
+        //template literial
+        console.log(`bạn ${name} rất chăm chỉ`);
+        //để truyền biến vào thì dùng dấu ${}
+        console.log("àdsag   sfgh");
+        let number=6;
+        console.log(number);
+        //ép kiểu dữ liệu từ string sang number
+        /* 
+            để dấu + ở trước
+            number(prompt("mời bạn nhập tuổi"));
+        */
+        let result="5";
+        console.log(typeof(result));
+        console.log(10<"15h");
+         // string có số thì sẽ ép sang number , nhưng number+chữ thì ko phải là số =>NaN
+    </script>
+</body>
+</html>

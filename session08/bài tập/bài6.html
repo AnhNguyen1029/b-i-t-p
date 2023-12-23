@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        kiểm tra sô hoàn hảo
+        số hoàn hảo là gì?
+         -số hoàn hảo có tổng các ước nhỏ hơn nó bằng chính nó
+         -ví dụ: 6 có các ước(số chia hết) nhỏ hơn nó :1 2 3 1+2+3=6
+         -ví dụ: 28 : 1 2 4 7 1+2+4+7+14 = 28
+
+         khi người dùng nhập vào 1 sô thì phải đi tìm ước trước
+         sau khi có các ước nhỏ hơn nó thì đi cộng các ước lại
+     -->
+     <script>
+        let number=prompt("mời nhập số càn kiểm tra");
+        let sum=0;
+        for (let i = 0; i < number; i++) {
+            if(number%i==0){
+                //in ra các ước số
+                console.log(i);
+                //cộng tổng các ước số
+                sum=sum+i
+            }
+            
+        }
+        // kết thúc for thì đi so sánh xem nó có tổng các ước bằng chính nó hay không?
+        if(sum==number){
+            console.log(`${number} là số hoàn hảo`);
+        }else{
+            console.log(`${number} không phải là số hoàn hảo`);
+        }
+     </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        nhập số nguyên n sau đó in ra dãy thõa mãn yêu cầu
+        n=3 thì:
+        1 2 3    // số hàng là số vòng lặ của i
+        2 3 4
+        3 4 5
+        ************
+        n=4 thì
+        1 2 3 4
+        2 3 4 5
+        3 4 5 6
+        4 5 6 7
+
+        dùng for lồng để giải quyết bài toán
+        giá trị các hàng là giá trị của i ( số vòng lặp của i// tổng số hàng)
+        giá trị của cột của các hàng là giá trị của j
+     -->
+    <script>
+        for (let i = 0; i < 3; i++) {
+            
+            for(let j = i+1; j <= i+3; j++){
+
+                document.write(j," ")
+            }
+            document.write("<br>")
+        }
+    </script>
+</body>
+</html>
