@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function nhapBaSo(a,b,c) {
+            let minNumbers;
+            if (a<b&&b<c) {
+                minNumbers = a;
+            }else if(b<c&&c<a) {
+                minNumbers= b;
+            }else {
+                minNumbers=c;
+            }
+            console.log(minNumbers);
+        }
+        nhapBaSo(4,7,9);
+
+    </script>
+    <!-- <script>
+        function test(a,b,c) {
+			var sobenhat = 0;
+
+	   if( a < b && a < c) {
+			 sobenhat = a;
+		 } else if (b < a && b < c) {
+			sobenhat = b;
+		 } else {
+			 sobenhat = c;
+		 }
+		 console.log(sobenhat);
+		}
+
+test(3,2,1);
+    </script> -->
+</body>
+</html>

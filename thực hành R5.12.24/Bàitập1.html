@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let number=parseInt(prompt("nhập số cuối của dãy số "));
+        let tong=0;
+        let cacSoChiaHetCho3=[];
+        for (let i = 1; i <= number; i++) {
+            if(i%3===0 && i%5!==0){
+            tong += i;
+            cacSoChiaHetCho3.push(i);
+        }
+        }
+        console.log(cacSoChiaHetCho3.join(`+`)+'='+tong);
+    </script>
+</body>
+</html>

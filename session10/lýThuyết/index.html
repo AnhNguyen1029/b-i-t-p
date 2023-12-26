@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        1.function : hàm
+         -hàm trong javascrip là một trương trình con bao gồm
+         một tập hợp các caau lệnh thực hiện một tác vụ cụ thể
+         -có thể tái sử dụng và bảo trì tốt hơn giúp nâng cao hiệu
+         suất công việc
+        2. các cách khai báo hàm
+         1. declaration:
+          function functionName(){
+            //thân của hàm
+            các logic
+          }
+          - Tên hàm đặt theo quy tắc camel-case, thường là hành động
+          -có thể gọi sau khi khai báo hoặc trước khi khai báo
+          2. expression-function
+          3.arrow-function
+          4.IIFE(hàm thường dùng để làm cái thư viện)
+        3. tham số, đối số trong hàm
+         -đối số (argument): khi gọi hàm truyền giá trị cho nó
+         -tham số(params): giá trị hàm nhận về
+        4. return trong hàm
+         -return chỉ dùng trong hàm thôi
+         -hàm gặp return thì sẽ dừng chương trình
+         -return: kết quả trả về của hàm.
+     -->
+     <script>
+        //mời khai báo thôi chưa có gọi hàm
+        // để hàm được thực thi thì phải gọi hàm
+        // sayHello();
+        function sayHello(a,b){
+            console.log("xin chào",a,b);
+        }
+        sayHello("hoa",'lan');
+        sayHello("ánh","hùng");
+        function tinhTong(a,b){
+            let total =0;
+            for (let i = 0; i < b; i++) {
+                total += i;
+                
+            }
+            console.log(`tổng các số từ ${a} đến ${b} là ${total}`);
+            
+        }
+        tinhTong(1,5);
+        tinhTong(2,9);
+
+        function tinhDiemTrungBinh(a,b,c) {
+            return (a+b+c)/3
+        }
+        // console.log(tinhDiemTrungBinh(5,6,7));
+        //console.log(result(5,6,7));
+function sinhID() {
+    return Math.floor(Math.random()*99999999)
+}
+        let student={
+            name:"hoa",
+            id:sinhID()
+        }
+        console.log(student);
+
+        // let total=0;
+        // for(let i=1; i<=5; i++){
+
+        //     total+=i
+        // }
+        //sayHello()// gọi hàm để hàm được chạy
+     </script>
+</body>
+</html>

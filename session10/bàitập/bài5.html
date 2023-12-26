@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        Bài 5: Cho người dùng nhập vào chuỗi kí tự.
+         Viết hàm kiểm tra xem tần suất xuất hiện của mỗi ký tự và in ra chúng
+         Input: “Hello World”
+         Output:
+
+     -->
+     <script>
+        let chuoiKyTu= prompt("nhập chuỗi bất kỳ");
+        let doiSangMang = chuoiKyTu.split("");
+        let doiSangMang1 = Array.from(new Set(doiSangMang)) ; //xóa phần tử trùng nhau
+        function kiemTra(chuoiKyTu) {
+            for (let i = 0; i < doiSangMang1.length; i++) {
+                let count = 0;
+                for (let j = 0; j < doiSangMang.length; j++) {
+                    if(doiSangMang1[i]==doiSangMang[j]){
+                        count++;
+                    }
+                }
+                console.log(`ký tự ${doiSangMang1[i]} xuất hiện ${count} lần`);
+            }
+        }
+        kiemTra(chuoiKyTu);
+     </script>
+</body>
+
+</html>

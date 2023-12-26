@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        Bài tập 2: Xoá các phần tử trùng nhau trong một mảng.
+            Ví dụ:
+            input: [1, 2, 3, 3, 4, 5, 5, 6, 7, 8, 8];
+            output: [1,2,3,4,5,6,7,8]
+
+     -->
+     <!-- 
+        tạo 1 mảng mới để chứa cấc phân tử ko trùng lặp
+        duyệt từng phần tử của mảng ban đầu
+         -kiểm tra xem nó đã tồn tại hay trong mảng mới chưa (.includes)
+         -nếu nó chưa tồn tại thì push vào trong mảng mới
+        khi duyệt hết mảng ban dầu, sẽ đc mảng mới chứa các giá trị không trùng tặp
+      -->
+     <script>
+        let daySo=[1, 2, 3, 3, 4, 5, 5, 6, 7, 8, 8];
+        let mangMoi=[];
+        for (let i = 0; i < daySo.length; i++) {
+            let kiemTra=mangMoi.includes(daySo[i])
+            if (!kiemTra) {
+                mangMoi.push(daySo[i]);
+            }    
+        }
+        console.log(mangMoi);
+     </script>
+</body>
+
+</html>
