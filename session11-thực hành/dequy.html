@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        đệ quy là gì?
+        tức là 1 function tự gọi lại chính nó.
+        giống như 1 cái vòng lặp nhưng gọn hơn
+     -->
+    <script>
+        // function giaiThua(a) {
+        //     if(a==1)
+        //         return 1
+        //         return a*giaiThua(--a)
+        //         /* 
+        //             5*giai thừa(4)=120(tự gọi lại cái hàm của nó để tính giai thừa ngược lại)
+        //             4*giai thừa(3=...
+        //             .
+        //             .
+        //             .
+        //             2*giai thừa(1)=2
+        //         */
+        // }
+        // console.log(giaiThua(5));
+        function tinhTong(b) {
+            if(b==1) 
+            return 1
+            return b+tinhTong(--b)
+        }
+        console.log(tinhTong(5));
+    </script>
+</body>
+</html>

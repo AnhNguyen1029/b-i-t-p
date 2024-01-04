@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        bài 1: cho người dùng nhập text, ngăn cách với nhau bởi dấu cách
+        in ra ký tự đầu tiên viết hoa
+        input: vũ hồng vân
+        output: Vũ Hồng Vân
+
+        bài 2:cho người dùng nhập đầy đủ tên một người
+        nếu gặp chữ hoa in xuống chữ thường
+        nếu gặp chữu thường in lên chữ hoa
+        input: vŨ Hồng Vân
+        output: Vũ hỒNG vÂN
+
+        
+     -->
+    <script>
+        //bài 1
+        /*         let name = prompt("Nhập đầy đủ họ tên");
+                function inHoa(newname) {
+                    let doiSangMang = name.toLowerCase().split(" ");
+                    let result = [];
+                    for (i = 0; i < doiSangMang.length; i++) {
+                        result.push(doiSangMang[i][0].toUpperCase() + doiSangMang[i].slice(1));
+                    }
+                    return result.join(" ");
+                }
+                console.log(inHoa(name)); */
+
+        /* ********************************************************** */
+
+        //bài 2
+        let name = prompt("Nhập đầy đủ họ tên");
+        function doiChu(hoten) {
+            let result = "";
+            for (let i = 0; i < name.length; i++) {
+                let doiChu = name[i]
+                if (doiChu == doiChu.toLowerCase()) {
+                    result += doiChu.toUpperCase();
+                    // result = result + ra.toUpperCase();
+                } else {
+                    result += doiChu.toLowerCase();
+                }
+            } return result;
+        }
+        console.log(doiChu(name));
+    </script>
+</body>
+
+</html>

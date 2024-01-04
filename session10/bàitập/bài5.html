@@ -16,6 +16,8 @@
 
      -->
      <script>
+        let numbers = [1,1,3,5,1,34,12,34,6,8,98,3,4,234,45,12,45,12,45,655,86];
+        console.log(Array.from(new Set(numbers)));// Array.from (new Set()) : loại bỏ phần tử trùng nhau
         let chuoiKyTu= prompt("nhập chuỗi bất kỳ");
         let doiSangMang = chuoiKyTu.split("");
         let doiSangMang1 = Array.from(new Set(doiSangMang)) ; //xóa phần tử trùng nhau
