@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Clone object   (copy tất cả các thuộc tính)
+        1.dùng toán tử spread
+        2.object.asign
+        3.dùng JSON.stringify
+        O
+
+     -->
+     <script>
+        /* let id=[1,2,5,6];
+        let name=[
+            {
+                id:1,
+                name:""
+            }
+        ]
+        let obj1={
+            name:"hoa"
+        } */
+        //clone các thuộc tính của obj1 gán vòa obj2
+        //và 2 thằng này ở 2 địa chỉ khác nhau
+        // let obj2 = {...obj1}; // toán tử spread--> cái này hay dùng nhất
+        // let obj2= Object.assign({},obj1);
+        let obj2 = JSON.parse(JSON.stringify(obj1));
+        //bản chất đi gán địa chỉ ô nhớ
+        obj1.name="nhung";
+        obj1.address="hn";
+        console.log(obj2);
+        let c={
+            name:"hoa"
+        }
+        let d={
+            name:"hoa"
+        }
+        console.log(c===d);// vì là khác địa chỉ nên ko so sánh được,nên là fall
+     </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .title1{
+            color: green;
+        }
+        .heading{
+            background-color: tomato;
+            font-size: 50px;
+        }
+        .toggle{
+            background-color: red;
+        }
+        .attribute{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title1">attribute</h1>
+    <p class="toggle">bật tắc toggle</p>
+    <p> setAttribute </p>
+    <img width="200px" height="100px" src="https://images.careerbuilder.vn/content/images/frontend-developer-la-gi-careerbuilder01.jpg" alt="">
+    <!-- 
+        classList : đây là 1 thuộc tính của element.
+        ==> Nó sẽ lấy ra hết danh sách class của element.
+        --Trong classList sẽ cung cấp các phương thức
+         1.add() : thêm class vào
+         2.remove() : xóa tên class
+         3.toggle() :giống như 1 công tắc có thì xóa đi không có thì thêm vào
+         4.contain() : kiểm tra xem element có class hay không. Trả về true/false
+   
+        setAttribute : thêm thuộc tính
+        -->
+     <button onclick="changeAttribute()">bấm</button>
+     <script>
+        function changeAttribute(){
+            let element= document.getElementsByTagName("h1");
+                element[0].id="title";
+            let doiImg=document.getElementsByTagName("img");
+                doiImg[0].src="../../images/gà.png";
+            let classList1 =element[0].classList.add("heading");
+            element[0].classList.remove("title1");
+            let elm= document.getElementsByTagName("p");
+            elm[0].classList.toggle("toggle");
+            let elementAttribute= document.getElementsByTagName("p");
+            elementAttribute[1].setAttribute("class","attribute");
+            }
+     </script>
+</body>
+</html>

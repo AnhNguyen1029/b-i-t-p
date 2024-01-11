@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .heading{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title" onclick="changeDom">XIn chào học viên Fukuoka</h1>
+    <button onclick="changeDom()">change</button>
+    <p class="head1">thẻ p1</p>
+    <p class="head2">thẻ p2</p>
+    <div class="head">thẻ div</div>
+    <!-- 
+        DOM- Document Object Model
+        mô tả tài liệu dạng đối tượng
+        -khi chương trình được tải(load) thì trình duyệt sẽ tạo ra mô hình cây DOM
+        -từ mô hình cây DOM này thì chúng ta có thể 
+         +thêm, sửa, xóa các phần tử html.
+        -các thành phần của DOM
+        gồm ba thành phần
+         1. Element (tên thẻ, div,p session,article,aside,...)
+         2. attribute (các thuộc tính: class,id,src,href,...)
+         3. text (nội dung)
+        Ⅰ-Các cách Để Lấy Elememt
+         C1: Lấy theo id.(id là duy nhất sẽ trả về 1 element)
+         document.getElemetById("tên id");
+         C2: lấy theo class.
+         document.getElementsByClassName("tên class");
+         ==> trả về 1 cái HTML Colection dạng mảng: có thể dùng for duyệt các phần tử
+         trong mảng, lấy các phần tử index
+         C3: lấy theo tên thẻ (TAG_NAME)
+         document.getElementsByTagName
+         ==> trả về 1 HTML collection dạng mảng...
+         C4: Lấy theo SELECTOR.
+         document.querySelector("tên bộ chọn selector")
+         ==> trả về 1 đối tượng
+         C5: lấy theo querySelectorALL
+         ==> trả về 1 NODELIST dạng mảng có thể truy lập theo index, dùng for để lọc các phần tử
+
+
+     -->
+     <script>
+        function changeDom(){
+            let getElementById= document.getElementById("title");
+        console.log("element",getElementById);
+        
+        let getElementsByClassName1=document.getElementsByClassName("head");
+        //getElementsByClassName1[1].style.color="red";
+        let getElementsByTagName1=document.getElementsByTagName("p");
+        getElementsByTagName1[0].style.fontSize="50px";
+        // console.log("1111111",getElementsByTagName1);
+        // console.log("11111",getElementsByClassName[1]);
+        }
+        // let getElementById= document.getElementById("title");
+        // console.log("element",getElementById);
+        // getElementById.className="heading";
+        // let getElementsByClassName=document.getElementsByClassName("head");
+        // console.log("11111",getElementsByClassName);
+        // let getElementsByTagName1=document.getElementsByTagName("p");
+        // console.log("1111111",getElementsByTagName1);
+        let getElementByQuerySelector= document.getElementByQuerySelector(".head2");
+        //getElementByQuerySelector.style.color="yellow";
+        let getElementByQuerySelectorAll
+        let obj={
+            name:"huyền",
+        }
+        //muốn thêm thuộc tính age cho đối tượng obj thì làm như thế nào?
+        obj.age= "25";
+     </script>
+</body>
+</html>
